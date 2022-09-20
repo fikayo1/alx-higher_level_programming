@@ -4,7 +4,6 @@ number = random.randint(-10000, 10000)
 if number < 0:
     number *= -1
     num = (number % 10) * -1
-    print(num)
     number *= -1
 else:
     num = number % 10
