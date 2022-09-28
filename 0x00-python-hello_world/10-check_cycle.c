@@ -6,14 +6,16 @@
  */
 int check_cycle(listint_t *list)
 {
-listint_t *current;
-current = list;
+listint_t *fast, *slow;
+fast = list;
+slow = list;
 
-while (list != NULL)
+while (fast != NULL && fast->next != NULL)
 {
-if (list->next == current)
+fast = fast->next->next;
+slow = slow->next;
+if (fast == slow)
 	return(1);
-list = list->next;
 }
 return(0);
 }
