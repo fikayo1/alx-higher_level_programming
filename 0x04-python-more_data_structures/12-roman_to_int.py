@@ -7,6 +7,7 @@ def roman_to_int(roman_string):
             return 0
         elif type(roman_string) != str:
             return 0
+    string = roman_string.upper()
     # if the number is less than the next subtract it from the num
     for i in range(len(string)):
         if i != len(string) - 1:
