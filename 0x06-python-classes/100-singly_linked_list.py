@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-"""A singly linked list module
-   ooooooo
-"""
 
 
 class Node():
