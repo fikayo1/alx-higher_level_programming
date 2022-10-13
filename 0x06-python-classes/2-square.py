@@ -5,7 +5,6 @@
 class Square():
     """A class that has size as a private attribute"""
 
-
     def __init__(self, size=0):
         """Constructor of a square with size"""
         if type(size) is not int:
