@@ -5,10 +5,11 @@
 """
 from math import pi
 
+
 class MagicClass():
     """a magic class from byte code"""
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         self.__radius = 0
         if type(radius) is not int or type(radius) is not float:
             raise TypeError('radius must be a number')
