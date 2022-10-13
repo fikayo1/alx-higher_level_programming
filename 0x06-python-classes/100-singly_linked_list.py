@@ -1,21 +1,27 @@
 #!/usr/bin/python3
-"""Linked list module"""
+""" Node module """
 
-class Node():
-    """a class that defines a node of a singly linked list"""
-    
-    def __init__(self, data, next_node=None):
-        """constructor for the node"""
+
+class Node:
+    """ Declares the Node class """
+
+    def __init__(self, data, next_node=None) -> None:
+        """
+        Intializes the attributes of node class
+        Args:
+            data: value of node
+            next_node:  address of next node
+        """
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        """getter for private attribute data"""
+        """ Gets data of a linked list """
         return self.__data
 
-    @data.setter(self, value):
-        """setter for private attribute data"""
+    @data.setter
+    def data(self, value):
         if type(value) is not int:
             raise TypeError("data must be an integer")
         else:
@@ -23,55 +29,54 @@ class Node():
 
     @property
     def next_node(self):
-        """getter for private attribute next_node"""
+        """ Gets next_node of a linked list """
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        """setter for private attribute next_node"""
-        if type(value) is not None or type(value) is not Node:
+        if type(value) is not Node and value is not None:
             raise TypeError("next_node must be a Node object")
         else:
             self.__next_node = value
 
-    
-    class SinglyLinkedList():
-        """a class that define the singly linked list"""
 
-        def __init__(self):
-            """constructor for the private attribute head"""
-            self.__head = None
+class SinglyLinkedList:
+    """ define a SinglyLinkedList Class """
 
-       def __str__(self) -> str:
-           """ returns SinglyLinkedList elements"""
-            nod = []
-            nxt = self.__head
+    def __init__(self) -> None:
+        """ defines the private attribute:head """
+        self.__head = None
 
-            while nxt is not None:
-                nod.append(str(nxt.data))
-                nxt = nxt.next_node
+    def __str__(self) -> str:
+        """ returns SinglyLinkedList elements"""
+        nod = []
+        nxt = self.__head
 
-            return "\n".join(nod)
+        while nxt is not None:
+            nod.append(str(nxt.data))
+            nxt = nxt.next_node
 
-        def sorted_insert(self, value):
-            """
-            Sorts the node values
-            Args:
-                value: value of node
-            """
-            if self.__head is None:
-                self.__head = Node(value)
+        return "\n".join(nod)
+
+    def sorted_insert(self, value):
+        """
+        Sorts the node values
+        Args:
+            value: value of node
+        """
+        if self.__head is None:
+            self.__head = Node(value)
+            return
+
+        if value < self.__head.data:
+            self.__head = Node(value, self.__head)
+            return
+
+        nxt, prev = self.__head.next_node, self.__head
+        while nxt is not None:
+            if value < nxt.data:
+                prev.next_node = Node(value, nxt)
                 return
-
-            if value < self.__head.data:
-                self.__head = Node(value, self.__head)
-                return
-
-            nxt, prev = self.__head.next_node, self.__head
-            while nxt is not None:
-                if value < nxt.data:
-                    prev.next_node = Node(value, nxt)
-                    return
-                prev = nxt
-                nxt = nxt.next_node
-            prev.next_node = Node(value) 
+            prev = nxt
+            nxt = nxt.next_node
+        prev.next_node = Node(value)
