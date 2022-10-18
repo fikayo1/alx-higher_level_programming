@@ -11,7 +11,9 @@ class Rectangle:
 
     def __str__(self):
         total = ""
-        if self.__height != 0 or self.__width != 0:
+        if self.__height == 0 or self.__width == 0:
+            return total
+        else:
             for i in range(self.__height):
                 total += ("#" * self.__width)
                 if i is not self.__height - 1:
