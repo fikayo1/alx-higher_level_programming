@@ -9,7 +9,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    
     def __str__(self):
         total = ""
         if self.__height == 0 or self.__width == 0:
