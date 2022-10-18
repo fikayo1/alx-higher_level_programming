@@ -11,7 +11,7 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-    
+
     def __str__(self):
         total = ""
         if self.__height == 0 or self.__width == 0:
@@ -22,12 +22,12 @@ class Rectangle:
                 if i is not self.__height - 1:
                     total += "\n"
         return total
-    
+
     def __del__(self):
         """print when an instance is deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-    
+
     def __repr__(self):
         """string representation to create new instance"""
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
@@ -69,7 +69,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * self.__width) + (2 * self.__height)
-    
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """returns the bigger rectangle based on area"""
