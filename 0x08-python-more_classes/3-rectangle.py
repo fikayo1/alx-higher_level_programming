@@ -14,9 +14,9 @@ class Rectangle:
         if self.__height != 0 or self.width != 0:
             for i in range(self.__height):
                 total += ("#" * self.__width)
-                if i is not self.__height -1:
+                if i is not self.__height - 1:
                     total += "\n"
-            return total
+        return total
 
     @property
     def width(self):
@@ -45,7 +45,7 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
         """return the area of the triangle"""
         return self.__width * self.__height
