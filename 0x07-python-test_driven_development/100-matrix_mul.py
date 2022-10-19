@@ -30,7 +30,7 @@ def matrix_mul(m_a, m_b):
         if not blocks:
             raise ValueError("m_a can't be empty")
         for integers in blocks:
-            if type(integers) is not int or type(integers) is not float:
+            if type(integers) is not int and type(integers) is not float:
                 raise TypeError("m_a should contain only integers or floats")
         if len(blocks) != prev_len and prev_len != 0:
             raise TypeError("each row of m_a must be of the same size")
@@ -43,7 +43,7 @@ def matrix_mul(m_a, m_b):
         if not blocks:
             raise ValueError("m_b can't be empty")
         for integers in blocks:
-            if type(integers) is not int or type(integers) is not float:
+            if type(integers) is not int and type(integers) is not float:
                 raise TypeError("m_b should contain only integers or floats")
         if len(blocks) != prev_len and prev_len != 0:
             raise TypeError("each row of m_b must be of the same size")
