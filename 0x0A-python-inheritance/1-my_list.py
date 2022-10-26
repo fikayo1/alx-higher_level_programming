@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""1-my_list"""
+"""
+The container of MyList class inherit from list
+"""
 
 
 class MyList(list):
-    """Inherits from class list"""
+    """MyList class that inherits from list"""
     def __init__(self):
         """To initialize the object"""
         super().__init__()
