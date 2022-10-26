@@ -55,7 +55,7 @@ checking that you can append to the list and it gets sorted:
         >>> l.print_sorted()
         [3, 6, 8, 18, 122]
 
-check for negative number:
+check for negative numbers with positive:
         >>> l = My_list()
         >>> l.append(122)
         >>> l.append(18)
@@ -64,6 +64,16 @@ check for negative number:
         >>> l.append(3)
         >>> l.print_sorted()
         [-10, -1, 3, 18, 122]
+
+checking for negative numbers:
+        >>> l = My_list()
+        >>> l.append(-122)
+        >>> l.append(-6)
+        >>> l.append(-8)
+        >>> l.append(-18)
+        >>> l.append(-2)
+        >>> l.print_sorted()
+        [-122, -18, -8, -6, -2]
 
 checking for correct number of arguments:
         >>> l = My_list()
