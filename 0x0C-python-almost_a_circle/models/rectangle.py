@@ -7,6 +7,7 @@ class Rectangle(Base):
     """A class that inherits from the base class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Constructor for the main class"""
 
         super().__init__(id)
 
@@ -73,8 +74,10 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """return the area of the rectangle instance"""
         return self.height * self.width
 
     def display(self):
+        """Prints the rectangle with '#'"""
         for i in range(self.height):
             print("#" * self.width)
