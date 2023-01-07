@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const nums = process.argv.slide(2).map(
+const nums = process.argv.slice(2).map(
   function (arg) {
     return (parseInt(arg));
   }
