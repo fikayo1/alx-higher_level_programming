@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 function addMeMaybe (number, thetFunction) {
-  thetFunction(x + 1);
+  thetFunction(number + 1);
 }
 
 module.exports = { addMeMaybe };
