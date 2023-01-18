@@ -2,6 +2,8 @@
 """
     Find peak module
 """
+
+
 def find_peak(list_of_integers):
     """
         find the peak in an unsorted array
@@ -11,6 +13,6 @@ def find_peak(list_of_integers):
             peak
     """
     if len(list_of_integers) == 0:
-        return("None")
+        return ("None")
     else:
-        return(max(list_of_integers))
+        return (max(list_of_integers))
