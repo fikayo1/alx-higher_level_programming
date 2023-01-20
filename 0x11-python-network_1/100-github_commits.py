@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script to get 10 commit from a repo"""
+"""List the 10 most recent commits of a github repo"""
 import requests
 import sys
 
