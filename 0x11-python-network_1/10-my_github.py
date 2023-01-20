@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Script to Get your github ID from the GIbhub api"""
 import requests
 from requests.auth import HTTPBasicAuth
